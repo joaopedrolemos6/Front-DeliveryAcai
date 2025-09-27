@@ -1,20 +1,20 @@
 import { Separator } from '@/components/ui/separator';
-import { MapPin, Phone, Clock, Instagram, Facebook } from 'lucide-react';
+import { MapPin, Phone, Clock, Instagram, Facebook, Sparkles } from 'lucide-react';
 
 export const Footer = () => {
   return (
-    <footer className="glass-card mt-20">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="glass-card mt-32">
+      <div className="container mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 rounded-xl bg-gradient-primary flex items-center justify-center">
-                <span className="text-white font-bold text-lg">A</span>
+          <div className="space-y-6">
+            <div className="flex items-center space-x-4">
+              <div className="w-12 h-12 rounded-2xl bg-gradient-primary flex items-center justify-center shadow-glow">
+                <Sparkles className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-foreground">AçaiPro</h3>
-                <p className="text-xs text-muted-foreground">Açaíteria Digital</p>
+                <h3 className="text-2xl font-display font-medium text-foreground">AçaiPro</h3>
+                <p className="text-sm text-muted-foreground">Açaíteria Artesanal</p>
               </div>
             </div>
             <p className="text-sm text-muted-foreground">

@@ -31,31 +31,36 @@ export const CartSidebar = ({
 
   return (
     <Sheet open={isOpen} onOpenChange={onClose}>
-      <SheetContent className="w-full sm:max-w-lg glass border-0">
-        <SheetHeader>
-          <SheetTitle className="flex items-center gap-2 text-foreground">
-            <ShoppingBag className="w-5 h-5" />
-            Seu Carrinho ({items.length})
+      <SheetContent className="w-full sm:max-w-lg glass border-0 backdrop-blur-3xl">
+        <SheetHeader className="border-b border-border/50 pb-6">
+          <SheetTitle className="flex items-center gap-3 text-foreground">
+            <div className="w-10 h-10 rounded-2xl bg-gradient-primary flex items-center justify-center">
+              <ShoppingBag className="w-5 h-5 text-white" />
+            </div>
+            <div>
+              <div className="font-display text-xl">Seu Carrinho</div>
+              <div className="text-sm text-muted-foreground font-normal">{items.length} {items.length === 1 ? 'item' : 'itens'}</div>
+            </div>
           </SheetTitle>
         </SheetHeader>
 
         <div className="flex flex-col h-full">
           {items.length === 0 ? (
-            <div className="flex-1 flex items-center justify-center">
+            <div className="flex-1 flex flex-col items-center justify-center py-20">
               <div className="text-center">
-                <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto mb-4">
-                  <ShoppingBag className="w-8 h-8 text-muted-foreground" />
+                <div className="w-20 h-20 bg-muted/50 rounded-3xl flex items-center justify-center mx-auto mb-6">
+                  <ShoppingBag className="w-10 h-10 text-muted-foreground" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">Carrinho vazio</h3>
-                <p className="text-muted-foreground">Adicione alguns açaís deliciosos!</p>
+                <h3 className="text-xl font-display font-medium text-foreground mb-3">Carrinho vazio</h3>
+                <p className="text-muted-foreground">Monte seu açaí perfeito e adicione aqui!</p>
               </div>
             </div>
           ) : (
             <>
               {/* Items List */}
-              <div className="flex-1 overflow-y-auto py-4 space-y-4">
+              <div className="flex-1 overflow-y-auto py-6 space-y-4">
                 {items.map((item) => (
-                  <div key={item.id} className="glass rounded-xl p-4">
+                  <div key={item.id} className="acai-card p-6">
                     <div className="flex justify-between items-start mb-3">
                       <div className="flex-1">
                         {item.type === 'acai' ? (

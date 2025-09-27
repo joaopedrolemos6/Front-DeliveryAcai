@@ -113,77 +113,87 @@ export const AcaiBuilder = ({ onAddToCart }: AcaiBuilderProps) => {
   }
 
   return (
-    <section className="container mx-auto px-4 py-20" id="build-acai">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-foreground mb-4">Monte Seu Açaí</h2>
-        <p className="text-lg text-muted-foreground">Escolha o tamanho, base e coberturas do seu açaí perfeito</p>
+    <section className="container mx-auto px-6 py-32" id="build-acai">
+      <div className="text-center mb-16">
+        <h2 className="heading-large text-foreground mb-6">Monte Seu Açaí</h2>
+        <p className="text-elegant text-muted-foreground max-w-2xl mx-auto">
+          Personalize cada detalhe do seu açaí perfeito, desde o tamanho até as coberturas mais especiais
+        </p>
       </div>
 
       {/* Size Selection */}
-      <div className="mb-8">
-        <h3 className="text-2xl font-semibold text-foreground mb-4">1. Escolha o Tamanho</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="mb-16">
+        <h3 className="text-2xl font-display font-medium text-foreground mb-8">1. Escolha o Tamanho</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {sizes.map((size) => (
-            <Card 
+            <div
               key={size.id}
-              className={`glass cursor-pointer transition-all duration-200 hover:scale-105 ${
-                selectedSize?.id === size.id ? 'ring-2 ring-primary' : ''
+              className={`acai-card cursor-pointer ${
+                selectedSize?.id === size.id ? 'ring-2 ring-primary shadow-glow' : ''
               }`}
               onClick={() => setSelectedSize(size)}
             >
-              <div className="p-6 text-center">
-                <h4 className="text-xl font-semibold text-foreground">{size.name}</h4>
-                <p className="text-muted-foreground">{size.volume}</p>
-                <Badge variant="secondary" className="mt-2">
-                  {size.multiplier}x preço
+              <div className="p-8 text-center">
+                <div className="w-16 h-16 bg-gradient-primary rounded-3xl flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl text-white font-bold">{size.id.toUpperCase()}</span>
+                </div>
+                <h4 className="text-xl font-display font-medium text-foreground mb-2">{size.name}</h4>
+                <p className="text-muted-foreground mb-4">{size.volume}</p>
+                <Badge variant="secondary" className="bg-accent/20 text-foreground border-0">
+                  {size.multiplier}x preço base
                 </Badge>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
       </div>
 
       {/* Base Selection */}
-      <div className="mb-8">
-        <h3 className="text-2xl font-semibold text-foreground mb-4">2. Escolha a Base</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="mb-16">
+        <h3 className="text-2xl font-display font-medium text-foreground mb-8">2. Escolha a Base</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {bases.map((base) => (
-            <Card 
+            <div
               key={base.id}
-              className={`glass cursor-pointer transition-all duration-200 hover:scale-105 ${
-                selectedBase?.id === base.id ? 'ring-2 ring-primary' : ''
+              className={`acai-card cursor-pointer ${
+                selectedBase?.id === base.id ? 'ring-2 ring-primary shadow-glow' : ''
               }`}
               onClick={() => setSelectedBase(base)}
             >
-              <div className="p-6">
-                <h4 className="text-xl font-semibold text-foreground mb-2">{base.name}</h4>
-                <p className="text-sm text-muted-foreground mb-4">{base.description}</p>
+              <div className="p-8">
+                <div className="w-20 h-20 bg-gradient-secondary rounded-3xl flex items-center justify-center mx-auto mb-6">
+                  <span className="text-3xl">🍇</span>
+                </div>
+                <h4 className="text-xl font-display font-medium text-foreground mb-3 text-center">{base.name}</h4>
+                <p className="text-sm text-muted-foreground mb-6 text-center leading-relaxed">{base.description}</p>
                 <div className="flex justify-between items-center">
-                  <Badge variant="outline">R$ {base.price.toFixed(2)}</Badge>
+                  <Badge variant="outline" className="border-primary/20 text-primary">
+                    R$ {base.price.toFixed(2)}
+                  </Badge>
                   {selectedSize && (
-                    <Badge variant="secondary">
+                    <Badge className="bg-gradient-primary border-0 text-white">
                       R$ {(base.price * selectedSize.multiplier).toFixed(2)}
                     </Badge>
                   )}
                 </div>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
       </div>
 
       {/* Toppings Selection */}
-      <div className="mb-8">
-        <h3 className="text-2xl font-semibold text-foreground mb-4">3. Adicione Coberturas</h3>
+      <div className="mb-16">
+        <h3 className="text-2xl font-display font-medium text-foreground mb-8">3. Adicione Coberturas</h3>
         
         {Object.entries(toppingsByCategory).map(([category, categoryToppings]) => (
           categoryToppings.length > 0 && (
-            <div key={category} className="mb-6">
-              <h4 className="text-lg font-medium text-foreground mb-3 capitalize">
-                {category === 'fruits' && '🍓 Frutas'}
-                {category === 'nuts' && '🥜 Castanhas e Granolas'}
-                {category === 'sweets' && '🍯 Doces'}
-                {category === 'extras' && '✨ Extras'}
+            <div key={category} className="mb-12">
+              <h4 className="text-xl font-medium text-foreground mb-6 flex items-center gap-3">
+                {category === 'fruits' && <><span className="text-2xl">🍓</span> Frutas Frescas</>}
+                {category === 'nuts' && <><span className="text-2xl">🥜</span> Castanhas & Granolas</>}
+                {category === 'sweets' && <><span className="text-2xl">🍯</span> Doces & Especiais</>}
+                {category === 'extras' && <><span className="text-2xl">✨</span> Extras Premium</>}
               </h4>
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3">
                 {categoryToppings.map((topping) => {
