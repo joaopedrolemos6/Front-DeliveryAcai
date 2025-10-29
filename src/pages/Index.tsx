@@ -66,13 +66,15 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header - Always visible */}
-      <Header 
-        cartItems={totalItems} 
-        onCartClick={() => setIsCartOpen(true)} 
-      />
+      <div className="p-4">
+        <Header 
+          cartItems={totalItems} 
+          onCartClick={() => setIsCartOpen(true)} 
+        />
+      </div>
 
       {/* Main Content */}
-      <main className="pt-20">
+      <main>
         {appState === 'home' && (
           <>
             <HeroSection onStartOrder={handleStartOrder} />

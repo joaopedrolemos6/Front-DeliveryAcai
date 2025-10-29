@@ -18,7 +18,7 @@ export const Header = ({ cartItems, onCartClick }: HeaderProps) => {
   };
 
   return (
-    <header className="glass-card fixed top-4 left-4 right-4 z-50 mx-auto max-w-7xl">
+    <header className="glass-card mx-auto max-w-7xl">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-3">
           <div className="relative">

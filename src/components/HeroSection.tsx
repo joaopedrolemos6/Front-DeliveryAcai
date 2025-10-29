@@ -18,20 +18,6 @@ export const HeroSection = ({ onStartOrder }: HeroSectionProps) => {
         <div className="absolute inset-0 bg-gradient-hero" />
       </div>
       
-      {/* Floating elements with açaí theme */}
-      <div className="absolute top-20 left-10 w-24 h-24 rounded-full bg-primary/5 animate-float flex items-center justify-center">
-        <Leaf className="w-8 h-8 text-primary/40" />
-      </div>
-      <div className="absolute top-40 right-20 w-32 h-32 rounded-full bg-accent/20 animate-float" style={{animationDelay: '2s'}}>
-        <div className="w-full h-full rounded-full flex items-center justify-center">
-          <div className="w-16 h-16 rounded-full bg-accent/40" />
-        </div>
-      </div>
-      <div className="absolute bottom-32 left-20 w-20 h-20 rounded-full bg-primary/10 animate-float" style={{animationDelay: '4s'}}>
-        <div className="w-full h-full rounded-full flex items-center justify-center">
-          <Heart className="w-6 h-6 text-primary/60" />
-        </div>
-      </div>
 
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="glass-card max-w-5xl mx-auto animate-slide-up">
