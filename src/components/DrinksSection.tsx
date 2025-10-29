@@ -38,7 +38,7 @@ export const DrinksSection = ({ onAddToCart }: DrinksSectionProps) => {
   const handleAddDrink = (drink: Drink) => {
     onAddToCart(drink);
     toast({
-      title: "Bebida adicionada! 🥤",
+      title: "Bebida adicionada!",
       description: `${drink.name} foi adicionado ao carrinho`,
     });
   };
@@ -73,10 +73,10 @@ export const DrinksSection = ({ onAddToCart }: DrinksSectionProps) => {
         categoryDrinks.length > 0 && (
           <div key={category} className="mb-12">
             <h3 className="text-2xl font-semibold text-foreground mb-6">
-              {category === 'juices' && '🧃 Sucos Naturais'}
-              {category === 'sodas' && '🥤 Refrigerantes'}
-              {category === 'waters' && '💧 Águas'}
-              {category === 'hot' && '☕ Bebidas Quentes'}
+              {category === 'juices' && 'Sucos Naturais'}
+              {category === 'sodas' && 'Refrigerantes'}
+              {category === 'waters' && 'Águas'}
+              {category === 'hot' && 'Bebidas Quentes'}
             </h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

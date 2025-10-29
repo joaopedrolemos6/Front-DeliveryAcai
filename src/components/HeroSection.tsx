@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Star, Leaf, Clock, Heart } from 'lucide-react';
+import { ArrowRight, Star, Leaf, Clock, Heart, Sparkles } from 'lucide-react';
 import acaiHero from '@/assets/acai-hero.jpg';
 
 interface HeroSectionProps {
@@ -105,7 +105,7 @@ export const HeroSection = ({ onStartOrder }: HeroSectionProps) => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="acai-card p-8 text-center group">
               <div className="w-16 h-16 bg-gradient-primary rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <span className="text-3xl">🍇</span>
+                <Sparkles className="w-8 h-8 text-white" />
               </div>
               <h3 className="font-display text-xl font-medium text-foreground mb-3">Açaí Premium</h3>
               <p className="text-muted-foreground leading-relaxed">

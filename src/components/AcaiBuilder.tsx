@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Plus, Minus, ShoppingCart } from 'lucide-react';
+import { Plus, Minus, ShoppingCart, Sparkles } from 'lucide-react';
 import { AcaiBase, AcaiSize, Topping } from '@/types';
 import { fetchAcaiBases, fetchAcaiSizes, fetchToppings } from '@/services/api';
 import { useToast } from '@/hooks/use-toast';
@@ -85,7 +85,7 @@ export const AcaiBuilder = ({ onAddToCart }: AcaiBuilderProps) => {
     onAddToCart(selectedSize, selectedBase, selectedToppings);
     
     toast({
-      title: "Açaí adicionado! 🍇",
+      title: "Açaí adicionado!",
       description: `${selectedBase.name} ${selectedSize.name} foi adicionado ao carrinho`,
     });
 
@@ -162,7 +162,7 @@ export const AcaiBuilder = ({ onAddToCart }: AcaiBuilderProps) => {
             >
               <div className="p-8">
                 <div className="w-20 h-20 bg-gradient-secondary rounded-3xl flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl">🍇</span>
+                  <Sparkles className="w-10 h-10 text-primary" />
                 </div>
                 <h4 className="text-xl font-display font-medium text-foreground mb-3 text-center">{base.name}</h4>
                 <p className="text-sm text-muted-foreground mb-6 text-center leading-relaxed">{base.description}</p>
@@ -190,10 +190,10 @@ export const AcaiBuilder = ({ onAddToCart }: AcaiBuilderProps) => {
           categoryToppings.length > 0 && (
             <div key={category} className="mb-12">
               <h4 className="text-xl font-medium text-foreground mb-6 flex items-center gap-3">
-                {category === 'fruits' && <><span className="text-2xl">🍓</span> Frutas Frescas</>}
-                {category === 'nuts' && <><span className="text-2xl">🥜</span> Castanhas & Granolas</>}
-                {category === 'sweets' && <><span className="text-2xl">🍯</span> Doces & Especiais</>}
-                {category === 'extras' && <><span className="text-2xl">✨</span> Extras Premium</>}
+                {category === 'fruits' && <>Frutas Frescas</>}
+                {category === 'nuts' && <>Castanhas & Granolas</>}
+                {category === 'sweets' && <>Doces & Especiais</>}
+                {category === 'extras' && <>Extras Premium</>}
               </h4>
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3">
                 {categoryToppings.map((topping) => {

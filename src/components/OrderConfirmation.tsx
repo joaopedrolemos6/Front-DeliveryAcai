@@ -26,7 +26,7 @@ export const OrderConfirmation = ({ order, onNewOrder }: OrderConfirmationProps)
         </div>
         
         <h1 className="text-4xl font-bold text-foreground mb-4">
-          Pedido Confirmado! 🎉
+          Pedido Confirmado!
         </h1>
         
         <p className="text-lg text-muted-foreground mb-2">

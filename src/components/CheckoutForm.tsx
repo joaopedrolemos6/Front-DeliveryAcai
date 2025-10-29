@@ -65,7 +65,7 @@ export const CheckoutForm = ({ items, subtotal, onBack, onOrderComplete }: Check
       onOrderComplete(order);
       
       toast({
-        title: "Pedido realizado com sucesso! 🎉",
+        title: "Pedido realizado com sucesso!",
         description: "Seu açaí está sendo preparado e chegará em breve",
       });
     } catch (error) {

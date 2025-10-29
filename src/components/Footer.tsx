@@ -105,8 +105,8 @@ export const Footer = () => {
           <p className="text-sm text-muted-foreground">
             © 2024 AçaiPro. Todos os direitos reservados.
           </p>
-          <p className="text-sm text-muted-foreground">
-            Feito com 💜 para os amantes de açaí
+          <p className="text-sm text-muted-foreground flex items-center gap-1.5">
+            Feito com <span className="text-primary">♥</span> para os amantes de açaí
           </p>
         </div>
       </div>
