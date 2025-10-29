@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Plus, Minus, ShoppingCart, Sparkles } from 'lucide-react';
+import { Plus, Minus, ShoppingCart, Sparkles, Apple, Cookie, Cake, Star } from 'lucide-react';
 import { AcaiBase, AcaiSize, Topping } from '@/types';
 import { fetchAcaiBases, fetchAcaiSizes, fetchToppings } from '@/services/api';
 import { useToast } from '@/hooks/use-toast';
@@ -190,10 +190,38 @@ export const AcaiBuilder = ({ onAddToCart }: AcaiBuilderProps) => {
           categoryToppings.length > 0 && (
             <div key={category} className="mb-12">
               <h4 className="text-xl font-medium text-foreground mb-6 flex items-center gap-3">
-                {category === 'fruits' && <>Frutas Frescas</>}
-                {category === 'nuts' && <>Castanhas & Granolas</>}
-                {category === 'sweets' && <>Doces & Especiais</>}
-                {category === 'extras' && <>Extras Premium</>}
+                {category === 'fruits' && (
+                  <>
+                    <div className="w-10 h-10 bg-gradient-secondary rounded-2xl flex items-center justify-center">
+                      <Apple className="w-5 h-5 text-primary" />
+                    </div>
+                    Frutas Frescas
+                  </>
+                )}
+                {category === 'nuts' && (
+                  <>
+                    <div className="w-10 h-10 bg-gradient-secondary rounded-2xl flex items-center justify-center">
+                      <Cookie className="w-5 h-5 text-primary" />
+                    </div>
+                    Castanhas & Granolas
+                  </>
+                )}
+                {category === 'sweets' && (
+                  <>
+                    <div className="w-10 h-10 bg-gradient-secondary rounded-2xl flex items-center justify-center">
+                      <Cake className="w-5 h-5 text-primary" />
+                    </div>
+                    Doces & Especiais
+                  </>
+                )}
+                {category === 'extras' && (
+                  <>
+                    <div className="w-10 h-10 bg-gradient-secondary rounded-2xl flex items-center justify-center">
+                      <Star className="w-5 h-5 text-primary" />
+                    </div>
+                    Extras Premium
+                  </>
+                )}
               </h4>
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3">
                 {categoryToppings.map((topping) => {

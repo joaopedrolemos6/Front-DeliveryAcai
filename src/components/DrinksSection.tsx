@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Plus } from 'lucide-react';
+import { Plus, GlassWater, Wine, Droplets, Coffee } from 'lucide-react';
 import { Drink } from '@/types';
 import { fetchDrinks } from '@/services/api';
 import { useToast } from '@/hooks/use-toast';
@@ -72,11 +72,39 @@ export const DrinksSection = ({ onAddToCart }: DrinksSectionProps) => {
       {Object.entries(drinksByCategory).map(([category, categoryDrinks]) => (
         categoryDrinks.length > 0 && (
           <div key={category} className="mb-12">
-            <h3 className="text-2xl font-semibold text-foreground mb-6">
-              {category === 'juices' && 'Sucos Naturais'}
-              {category === 'sodas' && 'Refrigerantes'}
-              {category === 'waters' && 'Águas'}
-              {category === 'hot' && 'Bebidas Quentes'}
+            <h3 className="text-2xl font-semibold text-foreground mb-6 flex items-center gap-3">
+              {category === 'juices' && (
+                <>
+                  <div className="w-10 h-10 bg-gradient-secondary rounded-2xl flex items-center justify-center">
+                    <GlassWater className="w-5 h-5 text-primary" />
+                  </div>
+                  Sucos Naturais
+                </>
+              )}
+              {category === 'sodas' && (
+                <>
+                  <div className="w-10 h-10 bg-gradient-secondary rounded-2xl flex items-center justify-center">
+                    <Wine className="w-5 h-5 text-primary" />
+                  </div>
+                  Refrigerantes
+                </>
+              )}
+              {category === 'waters' && (
+                <>
+                  <div className="w-10 h-10 bg-gradient-secondary rounded-2xl flex items-center justify-center">
+                    <Droplets className="w-5 h-5 text-primary" />
+                  </div>
+                  Águas
+                </>
+              )}
+              {category === 'hot' && (
+                <>
+                  <div className="w-10 h-10 bg-gradient-secondary rounded-2xl flex items-center justify-center">
+                    <Coffee className="w-5 h-5 text-primary" />
+                  </div>
+                  Bebidas Quentes
+                </>
+              )}
             </h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
