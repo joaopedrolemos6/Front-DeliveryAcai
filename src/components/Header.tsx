@@ -1,7 +1,8 @@
-import { ShoppingCart, Sun, Moon, Sparkles } from 'lucide-react';
+import { ShoppingCart, Sun, Moon, Sparkles, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import acaiLogo from '@/assets/acai-logo.png';
 
 interface HeaderProps {
@@ -11,6 +12,7 @@ interface HeaderProps {
 
 export const Header = ({ cartItems, onCartClick }: HeaderProps) => {
   const [isDark, setIsDark] = useState(false);
+  const navigate = useNavigate();
 
   const toggleTheme = () => {
     setIsDark(!isDark);
@@ -33,6 +35,16 @@ export const Header = ({ cartItems, onCartClick }: HeaderProps) => {
         </div>
 
         <div className="flex items-center space-x-1.5">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => navigate('/admin')}
+            className="rounded-xl w-10 h-10 hover:bg-primary/10 transition-all"
+            title="Admin"
+          >
+            <Shield className="h-4 w-4" />
+          </Button>
+
           <Button
             variant="ghost"
             size="icon"
