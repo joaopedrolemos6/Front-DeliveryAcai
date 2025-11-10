@@ -1,114 +1,112 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* AçaiPro Design System - Modern Açaíteria Theme */
+/* AçaiPro Design System - Minimalist Theme with SF Pro */
 
 @layer base {
   :root {
-    /* Core Colors - Inspired by açaí and nature */
-    --background: 250 20% 98%;
-    --foreground: 260 15% 8%;
+    /* Minimalist Colors */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 9%;
     
-    /* Açaí Brand Colors */
-    --primary: 280 90% 35%;  /* Deep açaí purple */
-    --primary-light: 280 80% 45%;
+    /* Primary - Simple Purple */
+    --primary: 270 60% 50%;
+    --primary-light: 270 50% 60%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 280 90% 30%;
+    --primary-hover: 270 60% 45%;
     
-    /* Natural secondary colors */
-    --secondary: 40 15% 94%;
-    --secondary-foreground: 260 15% 15%;
+    /* Neutral Secondary */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
     
-    /* Accent colors - Fresh and natural */
-    --accent: 100 40% 85%;  /* Soft green */
-    --accent-foreground: 260 15% 15%;
-    --accent-vibrant: 100 60% 50%;
+    /* Subtle Accent */
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 9%;
+    --accent-vibrant: 270 60% 50%;
     
-    /* UI Colors */
-    --muted: 250 10% 95%;
-    --muted-foreground: 260 8% 45%;
+    /* Minimal UI */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
     
-    --destructive: 0 75% 60%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
     
-    --border: 250 15% 90%;
-    --input: 250 15% 92%;
-    --ring: 280 90% 35%;
+    --border: 0 0% 90%;
+    --input: 0 0% 96%;
+    --ring: 270 60% 50%;
     
-    /* Glass effects */
-    --glass-background: 0 0% 100% / 0.85;
-    --glass-border: 280 90% 35% / 0.1;
-    --glass-shadow: 260 15% 8% / 0.08;
+    /* Simplified Glass */
+    --glass-background: 0 0% 100% / 0.7;
+    --glass-border: 0 0% 90%;
+    --glass-shadow: 0 0% 0% / 0.05;
     
-    /* Card styles */
-    --card: 0 0% 100% / 0.9;
-    --card-foreground: 260 15% 8%;
-    --card-border: 280 90% 35% / 0.08;
+    /* Clean Cards */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 9%;
+    --card-border: 0 0% 90%;
     
-    --popover: 0 0% 100% / 0.98;
-    --popover-foreground: 260 15% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 9%;
     
-    /* Gradients - Açaí inspired */
-    --gradient-primary: linear-gradient(135deg, hsl(280 90% 35%), hsl(290 85% 45%));
-    --gradient-secondary: linear-gradient(135deg, hsl(100 60% 90%), hsl(120 50% 85%));
-    --gradient-hero: linear-gradient(135deg, hsl(250 20% 98%) 0%, hsl(280 15% 96%) 50%, hsl(290 20% 94%) 100%);
-    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.25), hsl(280 20% 98% / 0.1));
+    /* Minimal Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(270 60% 50%), hsl(270 60% 45%));
+    --gradient-secondary: linear-gradient(135deg, hsl(0 0% 98%), hsl(0 0% 96%));
+    --gradient-hero: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 99%) 100%);
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.8), hsl(0 0% 100% / 0.6));
     
-    /* Shadows */
-    --shadow-soft: 0 2px 20px hsl(260 15% 8% / 0.06);
-    --shadow-medium: 0 8px 40px hsl(260 15% 8% / 0.1);
-    --shadow-strong: 0 20px 60px hsl(260 15% 8% / 0.15);
-    --shadow-glow: 0 0 40px hsl(280 90% 35% / 0.3);
+    /* Subtle Shadows */
+    --shadow-soft: 0 1px 3px hsl(0 0% 0% / 0.05);
+    --shadow-medium: 0 4px 12px hsl(0 0% 0% / 0.08);
+    --shadow-strong: 0 8px 24px hsl(0 0% 0% / 0.12);
+    --shadow-glow: 0 0 20px hsl(270 60% 50% / 0.15);
     
-    --radius: 1.25rem;
+    --radius: 0.75rem;
   }
 
   .dark {
-    --background: 260 15% 8%;
-    --foreground: 250 20% 98%;
+    --background: 0 0% 9%;
+    --foreground: 0 0% 98%;
     
-    --primary: 280 85% 60%;
-    --primary-light: 280 80% 70%;
-    --primary-foreground: 260 15% 8%;
-    --primary-hover: 280 85% 65%;
+    --primary: 270 60% 60%;
+    --primary-light: 270 50% 70%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 270 60% 65%;
     
-    --secondary: 260 10% 12%;
-    --secondary-foreground: 250 20% 90%;
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 0 0% 98%;
     
-    --accent: 100 30% 20%;
-    --accent-foreground: 100 40% 85%;
-    --accent-vibrant: 100 50% 40%;
+    --accent: 0 0% 14%;
+    --accent-foreground: 0 0% 98%;
+    --accent-vibrant: 270 60% 60%;
     
-    --muted: 260 10% 15%;
-    --muted-foreground: 250 8% 60%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 60%;
     
-    --destructive: 0 65% 55%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
     
-    --border: 260 10% 18%;
-    --input: 260 10% 16%;
-    --ring: 280 85% 60%;
+    --border: 0 0% 18%;
+    --input: 0 0% 14%;
+    --ring: 270 60% 60%;
     
-    --glass-background: 260 15% 8% / 0.85;
-    --glass-border: 280 85% 60% / 0.15;
-    --glass-shadow: 0 0% 0% / 0.25;
+    --glass-background: 0 0% 9% / 0.7;
+    --glass-border: 0 0% 18%;
+    --glass-shadow: 0 0% 0% / 0.2;
     
-    --card: 260 15% 8% / 0.9;
-    --card-foreground: 250 20% 98%;
-    --card-border: 280 85% 60% / 0.1;
+    --card: 0 0% 9%;
+    --card-foreground: 0 0% 98%;
+    --card-border: 0 0% 18%;
     
-    --popover: 260 15% 8% / 0.98;
-    --popover-foreground: 250 20% 98%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 98%;
     
-    --gradient-hero: linear-gradient(135deg, hsl(260 15% 8%) 0%, hsl(270 18% 10%) 50%, hsl(280 20% 12%) 100%);
-    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.08), hsl(280 20% 98% / 0.03));
+    --gradient-hero: linear-gradient(180deg, hsl(0 0% 9%) 0%, hsl(0 0% 8%) 100%);
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.05), hsl(0 0% 100% / 0.02));
     
-    --shadow-soft: 0 2px 20px hsl(0 0% 0% / 0.2);
-    --shadow-medium: 0 8px 40px hsl(0 0% 0% / 0.3);
-    --shadow-strong: 0 20px 60px hsl(0 0% 0% / 0.4);
+    --shadow-soft: 0 1px 3px hsl(0 0% 0% / 0.3);
+    --shadow-medium: 0 4px 12px hsl(0 0% 0% / 0.4);
+    --shadow-strong: 0 8px 24px hsl(0 0% 0% / 0.5);
   }
 }
 
@@ -119,170 +117,101 @@
   
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', system-ui, sans-serif;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
     font-feature-settings: "rlig" 1, "calt" 1;
     overflow-x: hidden;
-    letter-spacing: -0.011em;
+    letter-spacing: -0.01em;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
     font-weight: 600;
-    letter-spacing: -0.022em;
+    letter-spacing: -0.02em;
   }
   
-  /* Modern Glass Effect */
+  /* Minimal Glass Effect */
   .glass {
     background: hsl(var(--glass-background));
-    backdrop-filter: blur(24px) saturate(180%);
+    backdrop-filter: blur(12px);
     border: 1px solid hsl(var(--glass-border));
     box-shadow: var(--shadow-soft);
   }
   
   .glass-card {
-    @apply glass rounded-2xl p-8;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    @apply glass rounded-xl p-6;
+    transition: all 0.2s ease;
   }
   
   .glass-card:hover {
     box-shadow: var(--shadow-medium);
-    transform: translateY(-2px);
   }
   
-  /* Enhanced card styles */
+  /* Clean card styles */
   .acai-card {
-    @apply glass rounded-3xl overflow-hidden;
-    background: linear-gradient(135deg, hsl(var(--card)), hsl(var(--muted)));
-    border: 1px solid hsl(var(--card-border));
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    @apply bg-card rounded-xl overflow-hidden;
+    border: 1px solid hsl(var(--border));
+    transition: all 0.2s ease;
   }
   
   .acai-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: var(--shadow-strong);
-    border-color: hsl(var(--primary) / 0.2);
-  }
-  
-  /* Smooth transitions for all elements */
-  * {
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-medium);
   }
 }
 
 @layer components {
-  /* Modern Button Styles */
+  /* Minimal Button Styles */
   .btn-primary {
-    @apply relative overflow-hidden rounded-2xl px-8 py-4 font-medium text-primary-foreground;
-    background: var(--gradient-primary);
-    box-shadow: var(--shadow-soft);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    @apply relative overflow-hidden rounded-lg px-6 py-3 font-medium text-primary-foreground;
+    background: hsl(var(--primary));
+    transition: all 0.2s ease;
   }
   
   .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-glow);
-  }
-  
-  .btn-primary:active {
-    transform: translateY(0);
+    background: hsl(var(--primary-hover));
   }
   
   .btn-glass {
-    @apply glass hover:bg-white/10 text-foreground rounded-2xl px-8 py-4 font-medium;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    @apply bg-secondary text-foreground rounded-lg px-6 py-3 font-medium;
+    transition: all 0.2s ease;
   }
   
   .btn-glass:hover {
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-medium);
+    background: hsl(var(--muted));
   }
   
-  /* Enhanced Animations */
-  @keyframes float-gentle {
-    0%, 100% { 
-      transform: translateY(0px) rotate(0deg); 
-    }
-    33% { 
-      transform: translateY(-8px) rotate(1deg); 
-    }
-    66% { 
-      transform: translateY(-4px) rotate(-1deg); 
-    }
-  }
-  
-  @keyframes pulse-glow {
-    0%, 100% { 
-      box-shadow: var(--shadow-soft);
-      transform: scale(1);
-    }
-    50% { 
-      box-shadow: var(--shadow-glow);
-      transform: scale(1.02);
-    }
-  }
-  
-  @keyframes slide-up-elegant {
+  /* Minimal Animations */
+  @keyframes fade-in {
     from {
       opacity: 0;
-      transform: translateY(40px) scale(0.98);
+      transform: translateY(10px);
     }
     to {
       opacity: 1;
-      transform: translateY(0) scale(1);
+      transform: translateY(0);
     }
   }
   
-  @keyframes shimmer {
-    0% {
-      background-position: -1000px 0;
-    }
-    100% {
-      background-position: 1000px 0;
-    }
+  .animate-fade-in {
+    animation: fade-in 0.3s ease;
   }
   
-  .animate-float {
-    animation: float-gentle 8s ease-in-out infinite;
-  }
-  
-  .animate-glow {
-    animation: pulse-glow 4s ease-in-out infinite;
-  }
-  
-  .animate-slide-up {
-    animation: slide-up-elegant 0.8s ease-out;
-  }
-  
-  .animate-shimmer {
-    background: linear-gradient(
-      110deg,
-      transparent 40%,
-      hsl(var(--primary) / 0.1) 50%,
-      transparent 60%
-    );
-    background-size: 200% 100%;
-    animation: shimmer 2s infinite;
-  }
-  
-  /* Typography enhancements */
+  /* Clean Typography */
   .heading-display {
-    @apply text-6xl md:text-8xl font-medium;
-    font-family: 'Playfair Display', serif;
-    letter-spacing: -0.04em;
-    line-height: 0.9;
+    @apply text-5xl md:text-7xl font-semibold;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
   }
   
   .heading-large {
-    @apply text-4xl md:text-5xl font-medium;
-    font-family: 'Playfair Display', serif;
-    letter-spacing: -0.03em;
+    @apply text-3xl md:text-4xl font-semibold;
+    letter-spacing: -0.02em;
   }
   
   .text-elegant {
-    @apply text-lg md:text-xl;
+    @apply text-base md:text-lg;
     font-weight: 400;
     letter-spacing: -0.01em;
-    line-height: 1.6;
+    line-height: 1.5;
   }
 }
 
